@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-icons/core-icons.html">
+
+
+<polymer-element name="yo-list" attributes="heading">
+  <template>
+    <link rel="stylesheet" href="yo-list.css">
+    <ul>
+      <template id="greeting" repeat="{{ category in categories }}">
+        <li>
+          <core-icon icon="{{category.icon}}"></core-icon>  {{category.name}}
+        </li>
+      </template>
+
+      <li on-click="select"><core-icon icon="{{heading}}"></core-icon>  {{heading}}</li>
+    </ul>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        ready: function() {
+          this.categories = [
+            {
+              name: 'add',
+              icon: 'add'
+            },
+            {
+              name: 'name',
+              icon: 'alarm'
+            },
+            {
+              name: 'The Block',
+              icon: 'block'
+            }
+          ];
+        },
+        select: function(value) {
+          alert('dfd');
+        }
+      });
+
+    })();
+  </script>
+</polymer-element>
