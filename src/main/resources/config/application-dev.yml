@@ -10,7 +10,7 @@ spring:
         databaseName:
         serverName:
         username: postgres
-        password: postgres 
+        password: 1234509876 
 
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
